@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .header{
+            display: flex;
+            background-color: gray;
+            height: 80px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbrand h1{
+            padding: 10px 20px;
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            cursor:pointer;
+        }
+        nav>ul{
+            display: flex;
+            align-items: center;
+        }
+        nav>ul>li{
+            list-style: none;
+            text-align: center;
+            position: relative;
+
+            padding: 5px 10px;
+        }
+        /* li:hover{
+            background-color: black;
+            border-radius: 5px;
+        } */
+        nav>ul>li:hover>ul>li{
+            display: block;
+        }
+        nav>ul>li>a{
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+       }
+       nav>ul>li>ul{
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 40px;
+        left: -30px;
+        list-style: none;
+       }
+       nav>ul>li>ul>li{
+        /* width: 150px; */
+        background-color: gray;
+        padding: 10px 20px;
+        text-align: center;
+        display: none;
+    }
+    nav>ul>li>ul>li>a{
+           color: white;
+        text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+       }
+
+       @media screen and (max-width:992px){
+        .header{
+            flex-direction: column;
+            height: 100px;
+            margin: 0;
+            padding: 0;
+               }
+        .nav>ul>li>ul{
+            top: 0;
+        }
+       }
+
+       .brand{
+        height: 200px;
+        width: 100%;
+        background-color: black;
+       }
+
+    </style>
+</head>
+<body>
+    <section class="header">
+        <div class="navbrand">
+            <h1>Masum Billah.com</h1>
+        </div>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Blog</a>
+                        <ul>
+                            <li><a href="#">Tech</a></li>
+                            <li><a href="#">Non Tech</a></li>
+                            <li><a href="#">Travel</a></li>
+                            <li><a href="#">Learning</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Tuttorial</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <section>
+        <div class="brand">
+
+        </div>
+    </section>
+</body>
+</html>
